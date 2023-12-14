@@ -1,7 +1,23 @@
 
+    
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const month = months[new Date().getMonth()];
+    const days = new Date().getDate();
+    const year = new Date().getFullYear();
+    const hours = new Date().getHours();
+    const minutes = new Date().getMinutes();
+    const seconds = new Date().getSeconds();
+    
+    const dateFormat = document.getElementById("date-format").innerHTML = `${month} ${days}, ${year} ${hours}:${minutes}:${seconds}`;
+    document.getElementById("date-format").style.marginLeft = "350px";
+    document.getElementById("date-format").style.marginTop = "200px";
+    document.getElementById("date-format").style.marginRight = "440px";
+    const randomColor = Math.floor(Math.random() * 16);
+      document.getElementById("date-format").style.background = randomColor;
 
     const colorCube = document.getElementById("cube");
     colorCube.style.margin = "200px";
+    colorCube.style.marginTop = "20px"
     
     const firstElement = document.getElementById("first-element");
     firstElement.style.backgroundColor = "#4bd94b";
