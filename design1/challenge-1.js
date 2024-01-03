@@ -12,8 +12,27 @@
     document.getElementById("date-format").style.marginLeft = "350px";
     document.getElementById("date-format").style.marginTop = "200px";
     document.getElementById("date-format").style.marginRight = "440px";
-    const randomColor = Math.floor(Math.random() * 16);
-      document.getElementById("date-format").style.background = randomColor;
+    let  i = 0;
+  //help function 
+   const generateRandomColor=()=>{
+     const letters = "0123456789ABCDEF";
+     let colors ="#";
+     for(let i = 0;i<6;i++){
+      colors+=letters[Math.floor(Math.random()*16)]
+     }
+     return colors;
+   }
+   const changeBackground = () =>{
+    
+    const dateFormat=document.getElementById('date-format');
+    const newColour = generateRandomColor();
+    dateFormat.style.backgroundColor= newColour;
+   }
+    
+  setInterval(changeBackground,1000)
+    
+ 
+    
 
     const colorCube = document.getElementById("cube");
     colorCube.style.margin = "200px";
